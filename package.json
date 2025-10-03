@@ -1,0 +1,13 @@
+{
+  "name": "boolean-logic-tool",
+  "version": "1.2.0",
+  "description": "Boolean logic expression converter with truth tables, K-maps, and circuit schematics - supports multiple outputs",
+  "main": "index.html",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "start": "npx http-server ."
+  },
+  "keywords": ["boolean", "logic", "karnaugh", "kmap", "truth-table", "minimization", "simplification", "digital-logic", "quine-mccluskey", "circuit-diagram", "schematic", "logic-gates"],
+  "author": "",
+  "license": "MIT"
+}

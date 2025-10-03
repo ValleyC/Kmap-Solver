@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Logic Tool - K-map Simplifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Boolean Logic Simplification Tool</h1>
+            <p>Convert expressions, generate truth tables, and simplify using Karnaugh maps</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Input</h2>
+
+                <!-- Input Mode Selection -->
+                <div class="input-mode-selector">
+                    <button id="mode-expression-btn" class="mode-btn active">Boolean Expression</button>
+                    <button id="mode-truthtable-btn" class="mode-btn">Truth Table</button>
+                </div>
+
+                <!-- Expression Input Mode -->
+                <div id="expression-input-mode" class="input-mode">
+                    <div class="input-group">
+                        <label>Boolean Expression:</label>
+                        <input type="text" id="expression-input" placeholder="e.g., A'B + AC + BC">
+                        <small>Use: A-Z for variables, ' for NOT, + for OR, · or * for AND</small>
+                    </div>
+                </div>
+
+                <!-- Truth Table Input Mode -->
+                <div id="truthtable-input-mode" class="input-mode" style="display: none;">
+                    <div class="input-group">
+                        <label>Number of Variables:</label>
+                        <select id="num-variables">
+                            <option value="2">2 Variables</option>
+                            <option value="3">3 Variables</option>
+                            <option value="4">4 Variables</option>
+                            <option value="5">5 Variables</option>
+                            <option value="6">6 Variables</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Variable Names:</label>
+                        <input type="text" id="variable-names" placeholder="e.g., A,B,C" value="A,B">
+                        <small>Comma-separated variable names</small>
+                    </div>
+                    <div class="input-group">
+                        <label>Number of Outputs:</label>
+                        <select id="num-outputs">
+                            <option value="1" selected>1 Output</option>
+                            <option value="2">2 Outputs</option>
+                            <option value="3">3 Outputs</option>
+                            <option value="4">4 Outputs</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Output Names:</label>
+                        <input type="text" id="output-names" placeholder="e.g., F,G" value="F">
+                        <small>Comma-separated output names</small>
+                    </div>
+                    <button id="create-table-btn" class="btn-secondary">Create Truth Table</button>
+
+                    <div id="truth-table-input-container"></div>
+                </div>
+
+                <button id="generate-btn" class="btn-primary">Generate Results</button>
+            </section>
+
+            <section class="output-section">
+                <div class="truth-table-container">
+                    <h2>Truth Table</h2>
+                    <div id="truth-table"></div>
+                </div>
+
+                <div class="kmap-container">
+                    <h2>Karnaugh Map</h2>
+                    <div id="kmap"></div>
+                </div>
+
+                <div class="result-container">
+                    <h2>Simplified Expression</h2>
+                    <div id="simplified-result"></div>
+                    <div class="result-forms">
+                        <div><strong>SOP:</strong> <span id="sop-result"></span></div>
+                        <div><strong>POS:</strong> <span id="pos-result"></span></div>
+                    </div>
+                </div>
+
+                <div class="schematic-container">
+                    <h2>Logic Circuit Schematic</h2>
+                    <div id="schematic"></div>
+                </div>
+            </section>
+
+            <section class="export-section">
+                <button id="export-btn" class="btn-secondary">Export Results</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/parser.js"></script>
+    <script src="js/truthTable.js"></script>
+    <script src="js/kmap.js"></script>
+    <script src="js/simplifier.js"></script>
+    <script src="js/schematic.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
