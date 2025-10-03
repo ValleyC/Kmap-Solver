@@ -2,32 +2,6 @@
 
 A comprehensive web-based tool for Boolean logic expression analysis, featuring automatic conversion between Boolean expressions, truth tables, and Karnaugh maps (K-maps), with integrated simplification algorithms.
 
-## Features
-
-### Core Functionality
-- **Boolean Expression Parser** - Supports multiple operator notations (', ~, !, +, ·, *, etc.)
-- **Truth Table Generator** - Automatically generates complete truth tables from expressions
-- **Truth Table Input Mode** - ⭐ NEW: Start directly from truth table values
-- **K-map Construction** - Creates Karnaugh maps for 2-6 variables
-- **Expression Simplification** - Uses Quine-McCluskey algorithm for minimization
-- **Bidirectional Conversion** - Convert between expressions, truth tables, and K-maps
-- **Circuit Schematic Generator** - ⭐ NEW: Automatic logic circuit diagrams using AND, OR, NOT gates
-- **Multiple Output Support** - ⭐ NEW: Handle up to 4 outputs simultaneously
-- **Export Functionality** - Export results in JSON, CSV, and text formats
-
-### Two Input Methods
-1. **Boolean Expression Mode** - Enter expressions like `A'B + AC + BC`
-2. **Truth Table Mode** - ⭐ NEW: Input output values directly via interactive checkboxes
-   - Supports 1-4 outputs
-   - Each output gets independent K-map and simplified expression
-   - Automatic circuit schematic for each output
-
-### Supported Operations
-- **NOT**: `'`, `~`, `!`
-- **AND**: `*`, `·`, `.`, `&`
-- **OR**: `+`, `|`
-- **XOR**: `^`
-
 ## Project Structure
 
 ```
@@ -44,9 +18,7 @@ Kmap/
 ├── tests/
 │   └── run-tests.js       # Test suite
 ├── package.json           # Project metadata
-├── README.md             # This file
-├── QUICKSTART.md         # Quick start guide
-└── EXAMPLES.md           # Detailed usage examples
+└── README.md             # This file
 ```
 
 ## Usage
